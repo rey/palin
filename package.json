@@ -2,7 +2,7 @@
   "name": "palin",
   "version": "0.1.0",
   "description": "Check if you're online",
-  "main": "src/main.js",
+  "main": "main.js",
   "dependencies": {
     "menubar": "^3.0.0",
     "net-ping": "^1.1.12",
