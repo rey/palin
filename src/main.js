@@ -3,15 +3,15 @@ var ping = require('net-ping')
 
 var mb = menubar(
   {
-    icon: "images/icon.png",
+    // icon: "images/icon.png",
   }
 )
+
 
 
 mb.on('ready', function() {
 
   console.log("app is ready");
-
 
   setInterval(function() {
 
@@ -28,7 +28,7 @@ mb.on('ready', function() {
       // error
       if (error) {
         console.log (target + ": " + error.toString ());
-        mb.tray.setImage("images/dead.png");
+        // mb.tray.setImage("images/dead.png");
       }
 
       // success
