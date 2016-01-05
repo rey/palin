@@ -1,8 +1,6 @@
 var menubar = require('menubar')
 var ping = require('net-ping')
 
-console.log(__dirname);
-
 var mb = menubar(
   {
     icon: "images/icon.png"
