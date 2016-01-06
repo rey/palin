@@ -41,6 +41,6 @@ mb.on('ready', function() {
   }, 1000);
 });
 
-mb.on("after-create-window", function() {
-  mb.window.openDevTools();
-});
+// mb.on("after-create-window", function() {
+//   mb.window.openDevTools();
+// });
