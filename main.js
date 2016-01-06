@@ -50,7 +50,6 @@ app.on('ready', function(){
 
   setInterval(function() {
 
-    count++;
 
     var target="8.8.8.8";
     // var target="127.0.0.1";
@@ -77,6 +76,7 @@ app.on('ready', function(){
         appIcon.setImage(__dirname + "/alive.png");
       }
 
+      count++;
     });
 
   }, 1000);
