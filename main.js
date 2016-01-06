@@ -19,7 +19,8 @@ app.on('ready', function(){
       label: 'Palin ' + package.version,
       role: 'help',
     },
-    { label: 'Quit',
+    {
+      label: 'Quit',
       accelerator: 'Command+Q',
       selector: 'terminate:',
     }
