@@ -1,8 +1,8 @@
 {
   "name": "palin",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "description": "Check if you're online",
-  "main": "src/main.js",
+  "main": "main.js",
   "dependencies": {
     "menubar": "^3.0.0",
     "net-ping": "^1.1.12"
@@ -12,7 +12,7 @@
     "electron-prebuilt": "^0.36.2"
   },
   "scripts": {
-    "build": "electron-packager . Palin --platform=darwin --arch=x64 --version=0.36.2 --overwrite --out=app_build",
+    "build": "electron-packager . Palin --platform=darwin --arch=x64 --version=0.36.2 --overwrite --out=_build",
     "start": "electron ."
   },
   "author": "Rey Dhuny"
