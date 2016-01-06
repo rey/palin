@@ -1,5 +1,7 @@
-var menubar = require('menubar')
-var ping = require('net-ping')
+'use strict';
+
+var menubar = require("menubar")
+var ping = require("net-ping")
 
 var mb = menubar(
   {
@@ -9,13 +11,14 @@ var mb = menubar(
 )
 
 
-mb.on('ready', function() {
+mb.on("ready", function() {
 
   console.log("app is ready");
 
   setInterval(function() {
 
-    var target="8.8.8.8";
+    // var target="8.8.8.8";
+    var target="127.0.0.1";
     var options = {
       timeout: 2000
     };
