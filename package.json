@@ -4,7 +4,6 @@
   "description": "Check if you're online",
   "main": "main.js",
   "dependencies": {
-    "menubar": "^3.0.0",
     "net-ping": "^1.1.12"
   },
   "devDependencies": {
