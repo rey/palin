@@ -3,7 +3,6 @@ var Tray = require('tray');
 var Menu = require('menu');
 var path = require('path');
 var ping = require("net-ping")
-var BrowserWindow = require('browser-window');
 
 var iconPath = path.join(__dirname, 'icon.png');
 var appIcon = null;
@@ -12,7 +11,6 @@ var win = null;
 var package = require('./package.json');
 
 app.on('ready', function(){
-  win = new BrowserWindow({show: false});
   appIcon = new Tray(iconPath);
   var contextMenu = Menu.buildFromTemplate([
     {
