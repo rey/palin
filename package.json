@@ -11,7 +11,7 @@
     "electron-prebuilt": "^0.36.2"
   },
   "scripts": {
-    "build": "electron-packager . Palin --platform=darwin --arch=x64 --version=0.36.2 --overwrite --out=_build",
+    "build": "electron-packager . Palin --platform=darwin --arch=x64 --version=0.36.2 --icon=_icon/palin.icns --overwrite --out=_build",
     "start": "electron ."
   },
   "author": "Rey Dhuny"
