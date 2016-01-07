@@ -26,7 +26,7 @@ app.on('ready', function(){
     }
   ]);
 
-  appIcon.setToolTip('This is my application.');
+  appIcon.setToolTip('Palin is starting...');
   appIcon.setContextMenu(contextMenu);
 
   var count = 0;
@@ -48,12 +48,14 @@ app.on('ready', function(){
       // error
       if (error) {
         console.log ("🍎  " + target + " count: " + count + " error: " + error.toString ());
+        appIcon.setToolTip('Internet is unavailable');
         appIcon.setImage(__dirname + "/dead.png");
       }
 
       // success
       else  {
         console.log ("🍏  " + target + " count: " + count +  " delta: " + delta + " sent: " + sent.getUTCMilliseconds() + " rcvd: " + rcvd.getUTCMilliseconds());
+        appIcon.setToolTip('Internet is available');
         appIcon.setImage(__dirname + "/alive.png");
       }
 
