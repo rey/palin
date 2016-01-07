@@ -1,6 +1,6 @@
 {
   "name": "palin",
-  "version": "0.2.2",
+  "version": "0.2.3",
   "description": "Check if you're online",
   "main": "main.js",
   "dependencies": {
