@@ -7,7 +7,7 @@ const Tray = require('tray');
 const Ping = require("net-ping")
 
 palin.on('ready', function(){
-  var appIcon = new Tray(__dirname + "/icon.png");
+  var appIcon = new Tray(__dirname + "/standby@2x.png");
   var contextMenu = Menu.buildFromTemplate([
     {
       label: 'Palin ' + package.version,
@@ -37,14 +37,14 @@ palin.on('ready', function(){
       if (error) {
         console.log ("🍎  " + target + " count: " + count + " error: " + error.toString ());
         appIcon.setToolTip('Internet is unavailable');
-        appIcon.setImage(__dirname + "/dead.png");
+        appIcon.setImage(__dirname + "/dead@2x.png");
       }
 
       // Ping is successful!
       else  {
         console.log ("🍏  " + target + " count: " + count +  " delta: " + delta + " sent: " + sent.getUTCMilliseconds() + " rcvd: " + rcvd.getUTCMilliseconds());
         appIcon.setToolTip('Internet is available');
-        appIcon.setImage(__dirname + "/alive.png");
+        appIcon.setImage(__dirname + "/alive@2x.png");
       }
 
       count++;
