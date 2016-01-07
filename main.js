@@ -4,11 +4,10 @@ var package = require('./package.json');
 const palin = require('app');
 const Menu = require('menu');
 const Tray = require('tray');
-const ping = require("net-ping")
-
+const Ping = require("net-ping")
 
 palin.on('ready', function(){
-  appIcon = new Tray(__dirname + "/icon.png");
+  var appIcon = new Tray(__dirname + "/icon.png");
   var contextMenu = Menu.buildFromTemplate([
     {
       label: 'Palin ' + package.version,
@@ -28,7 +27,7 @@ palin.on('ready', function(){
   var options = { timeout: 500 };
 
   setInterval(function() {
-    var session = ping.createSession (options);
+    var session = Ping.createSession (options);
     session.pingHost (target, function (error, target, sent, rcvd) {
 
       // Calculate a rough ping time
