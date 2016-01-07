@@ -1,17 +1,14 @@
-var app = require('app');
-var Tray = require('tray');
-var Menu = require('menu');
-var path = require('path');
-var ping = require("net-ping")
-
-var iconPath = path.join(__dirname, 'icon.png');
-var appIcon = null;
-var win = null;
-
+// For the version number and any other meta I may need
 var package = require('./package.json');
 
-app.on('ready', function(){
-  appIcon = new Tray(iconPath);
+const palin = require('app');
+const Menu = require('menu');
+const Tray = require('tray');
+const ping = require("net-ping")
+
+
+palin.on('ready', function(){
+  appIcon = new Tray(__dirname + "/icon.png");
   var contextMenu = Menu.buildFromTemplate([
     {
       label: 'Palin ' + package.version,
@@ -23,34 +20,28 @@ app.on('ready', function(){
       selector: 'terminate:',
     }
   ]);
-
   appIcon.setToolTip('Palin is starting...');
   appIcon.setContextMenu(contextMenu);
 
-  var count = 0;
+  var count = 1;
+  var target="8.8.8.8";
+  var options = { timeout: 500 };
 
   setInterval(function() {
-
-    var target="8.8.8.8";
-    // var target="127.0.0.1";
-    var options = {
-      timeout: 500
-      // timeout: 2000
-    };
-
     var session = ping.createSession (options);
     session.pingHost (target, function (error, target, sent, rcvd) {
 
+      // Calculate a rough ping time
       var delta = rcvd - sent;
 
-      // error
+      // If ping isn't successful
       if (error) {
         console.log ("🍎  " + target + " count: " + count + " error: " + error.toString ());
         appIcon.setToolTip('Internet is unavailable');
         appIcon.setImage(__dirname + "/dead.png");
       }
 
-      // success
+      // Ping is successful!
       else  {
         console.log ("🍏  " + target + " count: " + count +  " delta: " + delta + " sent: " + sent.getUTCMilliseconds() + " rcvd: " + rcvd.getUTCMilliseconds());
         appIcon.setToolTip('Internet is available');
@@ -61,6 +52,5 @@ app.on('ready', function(){
     });
 
   }, 1000);
-
 });
 
