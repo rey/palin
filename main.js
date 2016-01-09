@@ -1,25 +1,25 @@
 // For the version number and any other meta I may need
-var package = require('./package.json');
+var package = require("./package.json");
 
-const palin = require('app');
-const Menu = require('menu');
-const Tray = require('tray');
+const palin = require("app");
+const Menu = require("menu");
+const Tray = require("tray");
 const Ping = require("net-ping")
 
-palin.on('ready', function(){
-  var appIcon = new Tray(__dirname + "/standby@2x.png");
+palin.on("ready", function(){
+  var appIcon = new Tray(__dirname + "/images/menu/standby@2x.png");
   var contextMenu = Menu.buildFromTemplate([
     {
-      label: 'Palin ' + package.version,
-      role: 'help',
+      label: "Palin " + package.version,
+      role: "help",
     },
     {
-      label: 'Quit',
-      accelerator: 'Command+Q',
-      selector: 'terminate:',
+      label: "Quit",
+      accelerator: "Command+Q",
+      selector: "terminate:",
     }
   ]);
-  appIcon.setToolTip('Palin is starting...');
+  appIcon.setToolTip("Palin is starting...");
   appIcon.setContextMenu(contextMenu);
 
   var count = 1;
@@ -33,18 +33,18 @@ palin.on('ready', function(){
       // Calculate a rough ping time
       var delta = rcvd - sent;
 
-      // If ping isn't successful
+      // If ping isn"t successful
       if (error) {
         console.log ("🍎  " + target + " count: " + count + " error: " + error.toString ());
-        appIcon.setToolTip('Internet is unavailable');
-        appIcon.setImage(__dirname + "/dead@2x.png");
+        appIcon.setToolTip("Internet is unavailable");
+        appIcon.setImage(__dirname + "/images/menu/dead@2x.png");
       }
 
       // Ping is successful!
       else  {
         console.log ("🍏  " + target + " count: " + count +  " delta: " + delta + " sent: " + sent.getUTCMilliseconds() + " rcvd: " + rcvd.getUTCMilliseconds());
-        appIcon.setToolTip('Internet is available');
-        appIcon.setImage(__dirname + "/alive@2x.png");
+        appIcon.setToolTip("Internet is available");
+        appIcon.setImage(__dirname + "/images/menu/alive@2x.png");
       }
 
       count++;
