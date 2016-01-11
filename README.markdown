@@ -22,10 +22,12 @@ open  ~/palin/_build
 
 ## Credits
 
-* [@lauramwillis](https://github.com/lauramwillis) for taking my butchered app
-  icon and making it round and beautiful.
 * Jethro Clunies-Ross for his suggestion to make the dots in the menu bar
   smaller.
+* [@lauramwillis](https://github.com/lauramwillis) for taking my butchered app
+  icon and making it round and beautiful.
+* [@johnbillion](https://github.com/johnbillion) for sanity checking my
+  JavaScript
 
 ***
 
