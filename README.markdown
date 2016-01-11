@@ -1,8 +1,8 @@
 # Palin
 
-![Palin screen shot](https://c2.staticflickr.com/2/1690/24001417140_7aee37c07f_o.png)
-
 ## About
+
+![Palin screen shot](https://c2.staticflickr.com/2/1690/24001417140_7aee37c07f_o.png)
 
 Palin is an app for your menu bar that shows a green dot when you have an
 internet connection, or a red dot if you don't have an internet connection.
