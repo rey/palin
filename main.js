@@ -1,6 +1,3 @@
-// For the version number and any other meta I may need
-var package = require("./package.json");
-
 const palin = require("app");
 const Menu = require("menu");
 const Tray = require("tray");
@@ -10,7 +7,7 @@ palin.on("ready", function(){
   var appIcon = new Tray(__dirname + "/images/menu/standby@2x.png");
   var contextMenu = Menu.buildFromTemplate([
     {
-      label: "Palin " + package.version,
+      label: "Palin " + palin.getVersion(),
       role: "help",
     },
     {
