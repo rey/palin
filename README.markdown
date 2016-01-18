@@ -35,7 +35,7 @@ open  ~/palin/_build
 
 ### 0.2.5
 
-* Don't show Dock icon
+* No longer show the app icon in the dock
 
 ### 0.2.4
 
