@@ -31,6 +31,35 @@ open  ~/palin/_build
 * [@johnbillion](https://github.com/johnbillion) for sanity checking my
   JavaScript.
 
+## Changelog
+
+### 0.2.5
+
+* Don't show Dock icon
+
+### 0.2.4
+
+* Consistent use of double quotes (sorry @johnbillion)
+* New icon images (thanks @lauramwillis)
+
+### 0.2.3
+
+* Retina tray icons
+
+### 0.2.2
+
+* Tidying up
+* Add tooltips depending on state
+
+### 0.2.0
+
+* Tidying up
+* Restructure project
+
+### 0.1.0
+
+* First!
+
 ***
 
 ## Generate `.icns`
