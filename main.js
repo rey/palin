@@ -30,9 +30,13 @@ palin.on("ready", function(){
       // Calculate a rough ping time
       var delta = rcvd - sent;
 
-      // If ping isn"t successful
+      // If ping isn't successful
       if (error) {
         console.log ("🍎  " + target + " count: " + count + " error: " + error.toString ());
+        appIcon.setToolTip("Internet is unavailable");
+        appIcon.setImage(__dirname + "/images/menu/dead@2x.png");
+      } else if ( ! sent ) {
+        console.log ("🍎  " + target + " count: " + count + " error: connection timed out");
         appIcon.setToolTip("Internet is unavailable");
         appIcon.setImage(__dirname + "/images/menu/dead@2x.png");
       }
