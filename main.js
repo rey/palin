@@ -25,7 +25,7 @@ palin.on("ready", function(){
 
   setInterval(function() {
     var session = Ping.createSession (options);
-    session.pingHost (target, function (error, target) {
+    session.pingHost (target, function (error) {
 
       // If ping isn"t successful
       if (error) {
