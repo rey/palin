@@ -1,7 +1,7 @@
 {
   "name": "palin",
   "productName": "Palin",
-  "version": "0.2.5",
+  "version": "0.2.6",
   "description": "Check if you're online",
   "main": "main.js",
   "dependencies": {
