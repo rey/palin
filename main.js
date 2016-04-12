@@ -32,14 +32,14 @@ palin.on("ready", function(){
 
       // If ping isn"t successful
       if (error) {
-        console.log ("🍎  " + target + " count: " + count + " error: " + error.toString ());
+        // console.log ("🍎  " + target + " count: " + count + " error: " + error.toString ());
         appIcon.setToolTip("Internet is unavailable");
         appIcon.setImage(__dirname + "/images/menu/dead@2x.png");
       }
 
       // Ping is successful!
       else  {
-        console.log ("🍏  " + target + " count: " + count +  " delta: " + delta + " sent: " + sent.getUTCMilliseconds() + " rcvd: " + rcvd.getUTCMilliseconds());
+        // console.log ("🍏  " + target + " count: " + count +  " delta: " + delta + " sent: " + sent.getUTCMilliseconds() + " rcvd: " + rcvd.getUTCMilliseconds());
         appIcon.setToolTip("Internet is available");
         appIcon.setImage(__dirname + "/images/menu/alive@2x.png");
       }
