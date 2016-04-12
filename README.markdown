@@ -33,6 +33,10 @@ open  ~/palin/_build
 
 ## Changelog
 
+### 0.2.6
+
+* Rip out all the debugging code
+
 ### 0.2.5
 
 * No longer show the app icon in the dock
