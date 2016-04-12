@@ -1,7 +1,7 @@
 const palin = require("app");
 const Menu = require("menu");
 const Tray = require("tray");
-const Ping = require("net-ping")
+const Ping = require("net-ping");
 
 palin.on("ready", function(){
   var appIcon = new Tray(__dirname + "/images/menu/standby@2x.png");
