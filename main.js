@@ -27,8 +27,12 @@ palin.on("ready", function(){
     var session = Ping.createSession (options);
     session.pingHost (target, function (error) {
 
-      // If ping isn"t successful
+      // If ping isn't successful
       if (error) {
+        appIcon.setToolTip("Internet is unavailable");
+        appIcon.setImage(__dirname + "/images/menu/dead@2x.png");
+      } else if ( ! sent ) {
+        console.log ("🍎  " + target + " count: " + count + " error: connection timed out");
         appIcon.setToolTip("Internet is unavailable");
         appIcon.setImage(__dirname + "/images/menu/dead@2x.png");
       }
